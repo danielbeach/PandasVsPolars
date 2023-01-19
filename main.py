@@ -5,7 +5,7 @@ import polars as pl
 def main(local_data: str = 'data/2022-07-01.csv'):
     # reading and displaying CSV files
     # Pandas
-    """
+    
     pd_df = pd.read_csv(local_data, header=0)
     print(pd_df)
     # Polars
@@ -52,7 +52,6 @@ def main(local_data: str = 'data/2022-07-01.csv'):
     pl_df = pl_df.with_column(pl.col("date").dt.year().alias('year'))
     pl_df = pl_df.drop(['smart_1_normalized', 'smart_1_raw'])
     print(pl_df.columns)
-    """
 
     # Aggregation and Grouping
     # Pandas
